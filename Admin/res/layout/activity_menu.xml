@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/cartaz"
+    tools:context=".Menu">
+
+    <ImageView
+        android:id="@+id/news"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="150dp"
+        android:background="@drawable/newspaper_menu"
+        android:onClick="selectButton"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/events"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/newstext"
+        android:layout_width="120dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="30dp"
+        android:gravity="center"
+        android:text="Notícias"
+        android:textColor="#000000"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/events"
+        app:layout_constraintTop_toBottomOf="@id/news" />
+
+    <ImageView
+        android:id="@+id/events"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:background="@drawable/events"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="150dp"
+        android:onClick="selectButton"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/news"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <TextView
+        android:id="@+id/eventstext"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:layout_marginRight="30dp"
+        android:gravity="center"
+        android:text="Eventos"
+        android:textColor="#000000"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/news"
+        app:layout_constraintTop_toBottomOf="@id/events" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

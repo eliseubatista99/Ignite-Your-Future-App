@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/blue"
+    tools:context=".EditEvent">
+
+    <TextView
+        android:id="@+id/titulo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:text="Editar Evento"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="35dp"
+        android:textStyle="italic"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/nome"
+        android:layout_width="270dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="25dp"
+        android:background="#FCFDFD"
+        android:drawableLeft="@drawable/icon_title"
+        android:hint="Título do Evento"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/titulo" />
+
+    <EditText
+        android:id="@+id/desc"
+        android:layout_width="270dp"
+        android:layout_height="35dp"
+        android:layout_margin="15dp"
+        android:background="#FCFDFD"
+        android:drawableLeft="@drawable/icon_description"
+        android:hint="Descrição"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/nome" />
+
+    <EditText
+        android:id="@+id/idade_min"
+        android:layout_width="120dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp"
+        android:layout_marginLeft="35dp"
+        android:background="#FCFDFD"
+        android:drawableLeft="@drawable/icon_age"
+        android:hint="Idade Mín."
+        android:inputType="number"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/idade_max"
+        app:layout_constraintTop_toBottomOf="@id/desc" />
+
+    <EditText
+        android:id="@+id/idade_max"
+        android:layout_width="120dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp"
+        android:layout_marginRight="35dp"
+        android:background="#FCFDFD"
+        android:drawableLeft="@drawable/icon_age"
+        android:hint="Idade Max."
+        android:inputType="number"
+        app:layout_constraintLeft_toRightOf="@id/idade_min"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/desc" />
+
+    <EditText
+        android:id="@+id/local"
+        android:layout_width="270dp"
+        android:layout_height="35dp"
+        android:layout_margin="15dp"
+        android:background="#FCFDFD"
+        android:drawableLeft="@drawable/icon_local"
+        android:hint="Local do Evento"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/idade_max" />
+
+    <EditText
+        android:id="@+id/limite"
+        android:layout_width="270dp"
+        android:layout_height="35dp"
+        android:layout_margin="15dp"
+        android:background="#FCFDFD"
+        android:drawableLeft="@drawable/icon_limit"
+        android:hint="Limite De Inscritos"
+        android:inputType="number"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/local" />
+
+    <TextView
+        android:id="@+id/Data"
+        android:layout_width="270dp"
+        android:layout_height="35dp"
+        android:layout_margin="15dp"
+        android:background="#FCFDFD"
+        android:drawableLeft="@drawable/icon_calendar"
+        android:gravity="center_vertical"
+        android:hint="Data do Evento"
+        android:textSize="17dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/limite" />
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="180dp"
+        android:layout_height="100dp"
+        android:layout_margin="20dp"
+        android:background="@drawable/gallery"
+        android:onClick="pickFromGallery"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/Data" />
+
+    <Button
+        android:id="@+id/submit"
+        android:layout_width="230dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="60dp"
+        android:background="@drawable/round_blue_button"
+        android:onClick="submeter"
+        android:text="Submeter"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/image" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

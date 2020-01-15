@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/blue"
+    tools:context=".ViewInscritos">
+
+    <TextView
+        android:id="@+id/titulo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:text="Consultar Inscritos"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="43dp"
+        android:textStyle="italic"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/nome"
+        android:layout_width="270dp"
+        android:layout_height="35dp"
+        android:background="#FCFDFD"
+        android:layout_marginTop="25dp"
+        android:hint="Título do Evento"
+        android:drawableLeft="@drawable/icon_title"
+        android:gravity="center_vertical"
+        app:layout_constraintTop_toBottomOf="@id/titulo"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+    <TextView
+        android:id="@+id/desc"
+        android:layout_width="270dp"
+        android:layout_height="wrap_content"
+        android:minHeight="35dp"
+        android:background="#FCFDFD"
+        android:layout_margin="15dp"
+        android:hint="Descrição"
+        android:drawableLeft="@drawable/icon_description"
+        android:gravity="center_vertical"
+        app:layout_constraintTop_toBottomOf="@id/nome"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
+    <TextView
+        android:id="@+id/Data"
+        android:layout_width="270dp"
+        android:layout_height="35dp"
+        android:layout_margin="15dp"
+        android:background="#FCFDFD"
+        android:gravity="center_vertical"
+        android:hint="Data do Evento"
+        android:textSize="17dp"
+        android:drawableLeft="@drawable/icon_calendar"
+        app:layout_constraintTop_toBottomOf="@id/desc"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="180dp"
+        android:layout_height="100dp"
+        android:layout_margin="15dp"
+        android:background="@drawable/gallery"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/Data" />
+    <TextView
+        android:id="@+id/inscritos"
+        android:layout_width="270dp"
+        android:layout_height="35dp"
+        android:layout_margin="15dp"
+        android:background="#FCFDFD"
+        android:hint="Inscritos/Limite"
+        android:gravity="center_vertical"
+        android:textSize="15dp"
+        android:drawableLeft="@drawable/icon_user"
+        app:layout_constraintTop_toBottomOf="@id/image"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
