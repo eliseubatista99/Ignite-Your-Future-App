@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/cartaz"
+    tools:context=".Login">
+
+    <EditText
+        android:id="@+id/username"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:background="#FCFDFD"
+        android:layout_margin="55dp"
+        android:hint="Nome de Utilizador"
+        android:drawableLeft="@drawable/icon_user"
+        app:layout_constraintBottom_toTopOf="@+id/password"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:background="#FCFDFD"
+        android:layout_margin="55dp"
+        android:hint="Palavra-Passe"
+        android:drawableLeft="@drawable/icon_key"
+        android:inputType="textPassword"
+        app:layout_constraintBottom_toTopOf="@id/Login"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <Button
+        android:id="@+id/Login"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="85dp"
+        android:background="@drawable/round_blue_button"
+        android:onClick="clickLogin"
+        android:radius="100dp"
+        android:text="Login"
+        android:textColorHighlight="#9B9C9C"
+        android:textSize="25dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

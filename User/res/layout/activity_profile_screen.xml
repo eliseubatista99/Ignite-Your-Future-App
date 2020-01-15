@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/blue"
+    tools:context=".ProfileScreen">
+
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_margin="30dp"
+        android:background="@drawable/user_big"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        />
+
+    <EditText
+        android:id="@+id/Nome"
+        android:layout_width="250dp"
+        android:layout_height="40dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginBottom="25dp"
+        android:layout_marginLeft="25dp"
+        android:background="#FCFDFD"
+        android:hint="Nome"
+        android:drawableLeft="@drawable/icon_name"
+        app:layout_constraintBottom_toTopOf="@+id/Sobrenome"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <EditText
+        android:id="@+id/Sobrenome"
+        android:layout_width="250dp"
+        android:layout_height="40dp"
+        android:background="#FCFDFD"
+        android:layout_margin="25dp"
+        android:hint="Sobrenome"
+        android:drawableLeft="@drawable/icon_name"
+        app:layout_constraintBottom_toTopOf="@id/DataNasc"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <TextView
+        android:id="@+id/DataNasc"
+        android:layout_width="250dp"
+        android:layout_height="40dp"
+        android:layout_margin="25dp"
+        android:background="#FCFDFD"
+        android:gravity="center_vertical"
+        android:hint="Data de Nascinento"
+        android:textSize="17dp"
+        android:drawableLeft="@drawable/icon_calendar"
+        app:layout_constraintBottom_toTopOf="@id/username"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <TextView
+        android:id="@+id/username"
+        android:layout_width="250dp"
+        android:layout_height="40dp"
+        android:layout_margin="25dp"
+        android:background="#FCFDFD"
+        android:drawableLeft="@drawable/icon_user"
+        android:gravity="center_vertical"
+        android:textSize="18dp"
+        android:hint="Nome de Utilizador"
+        app:layout_constraintBottom_toTopOf="@+id/old_password"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <EditText
+        android:id="@+id/old_password"
+        android:layout_width="250dp"
+        android:layout_height="40dp"
+        android:background="#FCFDFD"
+        android:layout_margin="25dp"
+        android:hint="Palavra-Passe Antiga"
+        android:drawableLeft="@drawable/icon_key"
+        android:inputType="textPassword"
+        app:layout_constraintBottom_toTopOf="@id/new_password"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <EditText
+        android:id="@+id/new_password"
+        android:layout_width="250dp"
+        android:layout_height="40dp"
+        android:background="#FCFDFD"
+        android:layout_margin="25dp"
+        android:hint="Nova Palavra-Passe"
+        android:drawableLeft="@drawable/icon_key"
+        android:inputType="textPassword"
+        app:layout_constraintBottom_toTopOf="@id/new_password_check"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <EditText
+        android:id="@+id/new_password_check"
+        android:layout_width="250dp"
+        android:layout_height="40dp"
+        android:background="#FCFDFD"
+        android:layout_margin="25dp"
+        android:hint="Confirmar Palavra-Passe"
+        android:drawableLeft="@drawable/icon_key"
+        android:inputType="textPassword"
+        app:layout_constraintBottom_toTopOf="@id/Registar"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <Button
+        android:id="@+id/Registar"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/round_blue_button"
+        android:layout_margin="35dp"
+        android:text="Atualizar Dados"
+        android:textSize="25dp"
+        android:onClick="submeter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
